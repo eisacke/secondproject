@@ -1,0 +1,52 @@
+---------------assemblyYard----------------
+-database of useful reusable code that is searchable by anyone
+-only certain people can sign up - the user *must* use a specific key which is given to them (ie superuser(me) generates keys and gives them to people)
+-users can add code snippets, leave comments on other peoples code and (maybe?) suggest, but not make, changes
+-users can however edit, update and delete their own code
+-users can upvote bits of code and fovourite other bits, and follow other users
+-user homepage shows feed recent/popular bits and things from those they follow
+
+models
+users - two types : user and SUPERuser
+	has_many :snippets
+	user_name : unique
+	password : digest
+	email : unique
+	requires : key
+end
+
+snippets 
+	belongs_to :user
+	contents : text
+	search terms : string
+	name : string
+end
+
+categories
+	has_and_belongs_to_many: :snippets
+	ruby : boolean
+	html : boolean
+	javascript : boolean
+	css : boolean	
+end
+
+functions 
+	search entire db by keyword or name and filter by language
+	view by language/popularity/date
+	code can be voted on
+	code can be commented on
+	code can be updated and deleted by it's uploader(owner)
+	*owners can disable comments?*
+end 
+
+*SPECIAL FEATURE*
+users can render programmes? ie properly formatted files can be rendered in browser, copied straight out and tested in something like irb or JS.lint.
+
+templates
+	has_and_belongs_to_many :users
+	name : string
+	search terms : string
+end
+
+
+

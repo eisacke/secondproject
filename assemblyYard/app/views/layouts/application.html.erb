@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AssemblyYard</title>
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
+</head>
+<div class="wrapper">
+	<body>
+		<%= render "header" %>
+		<% flash.each do |name, message| %>
+		<div class="flash-message flash-message-<%= name %>">
+		  <%= message %>
+		</div>
+		<% end %>
+		<%= yield %>
+	</body>
+</div>
+<footer>Work Harder Faster</footer>
+</html>
