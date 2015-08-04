@@ -10,6 +10,7 @@
 <div class="wrapper">
 	<body>
 		<%= render "header" %>
+		<%= yield(:search) %>
 		<% flash.each do |name, message| %>
 		<div class="flash-message flash-message-<%= name %>">
 		  <%= message %>

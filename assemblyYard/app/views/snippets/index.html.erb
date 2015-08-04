@@ -1,5 +1,16 @@
 <h1> Code Index </h1>
 
+<% content_for :search do %>
+  <div class="large-8 small-9 columns">
+  <%= search_form_for @search do |f| %>
+    <%= f.text_field :search_terms_cont, class: "radius-left expand", placeholder: "Search Terms" %>
+  </div>
+    <div class="large-4 small-3 columns">
+      <%= f.submit "Search", class: "radius-right button" %>
+    </div>
+  <% end %>
+<% end %>
+
 <% @snippets.each do |snippet|%>
  <%= snippet.name %>
  <%= snippet.search_terms %>

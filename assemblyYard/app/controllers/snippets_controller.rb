@@ -2,6 +2,8 @@ class SnippetsController < ApplicationController
 	
 	def index
 	  @snippets = Snippet.all
+	  @search = Snippet.search(params[:q])
+	  @snippets = @search.result(distinct: true)
 	end
 
 	def show
