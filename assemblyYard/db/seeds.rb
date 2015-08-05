@@ -9,7 +9,7 @@
 user1 = User.create!(user_name:"sam", email: "sam@gmx.com", password:"password", password_confirmation:"password")
 user2 = User.create!(user_name:"emily", email: "emily@gmx.com", password:"password", password_confirmation:"password")
 user3 = User.create!(user_name:"keith", email: "keith@gmx.com", password:"password", password_confirmation:"password")
-user3 = User.create!(user_name:"dami", email: "dami@gmx.com", password:"password", password_confirmation:"password")
+user4 = User.create!(user_name:"dami", email: "dami@gmx.com", password:"password", password_confirmation:"password")
 
 category1 = Category.create!(language:"ruby")
 category2 = Category.create!(language:"javascript")
