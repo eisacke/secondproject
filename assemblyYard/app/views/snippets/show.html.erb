@@ -1,0 +1,14 @@
+<h1> Show Code </h1>
+ <%= @snippet.name %>
+ <%= @snippet.search_terms %>
+ <pre class="language-<%= @snippet.category.language %>" rel="<%= @snippet.category.language %>"><code class="language-<%= @snippet.category.language %>">
+ <%= @snippet.contents %>
+ </code></pre>
+ <%= @snippet.user.try(:user_name) %>
+ <%= @snippet.category.language %>
+ <% if can? :update, @snippet %>
+ <%= link_to "Edit", edit_snippet_path(@snippet) %>
+ <%= link_to "Delete", @snippet, method: :delete, data: { confirm: 'Deltet this code?' } %>
+ <% end %>
+
+<%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
