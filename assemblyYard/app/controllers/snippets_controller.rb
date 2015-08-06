@@ -47,6 +47,12 @@ class SnippetsController < ApplicationController
 		end
 	end
 
+	def upvote
+		@snippet = Snippet.find(params[:id])
+		@snippet.upvote_by current_user
+		redirect_to :back
+	end
+
 	def update
 		respond_to do |format|
 			if @snippet.update(snippet_params)

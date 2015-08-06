@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user
   
   rescue_from CanCan::AccessDenied do |exception|
-    redirect_to root_url, :alert => "Cheeky Monkey!"
+    redirect_to root_url, :alert => "I don't think you're allowed to do that - is someone being a cheeky monkey?"
   end
 
   def current_user 

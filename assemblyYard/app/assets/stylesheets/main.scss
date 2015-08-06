@@ -14,11 +14,12 @@ li {
 html, body {
 	height: 100%;
 }
+
 .wrapper {
 	min-height: 100%;
 	margin: 0 auto -25px;
-}
-.footer, .push {
+} 
+.push {
 	height: 25px; 
 }
 
@@ -27,6 +28,7 @@ footer {
 	font-family: 'Ubuntu Mono';
 	font-weight: 700;
 	font-size: 25px;
+	height:25px;
 }
 
 .actions {
@@ -62,6 +64,7 @@ text-area {
 
 .welcome {
 	text-align: center;
+	margin: 20px;
 }
 
 .ubuntu {
@@ -74,4 +77,29 @@ text-area {
 	list-style-type: disc;
 	margin:1em;
 }
+
+.welcome-index {
+	border-bottom: 1px solid black;
+	margin:10px;
+	min-height: 600px;
+}
+
+main > a {
+	color:black;
+	margin:5px;
+	margin-left:none;
+	float:right;
+}
+
+h1 > .do-stuff {
+	text-align: right;
+	float:right;
+	text-transform: capitalize;
+}
+
+
+
+
+
+
 

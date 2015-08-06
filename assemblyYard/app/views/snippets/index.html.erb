@@ -1,4 +1,4 @@
-<h1> Most Recent Code </h1>
+<h1> Every Snippet of Code I Know </h1>
 <% content_for :search do %>
 <%= search_form_for @search do |f| %>
 <div class="search-bar">
@@ -7,7 +7,7 @@
 </div>
 <% end %>
 <% end %>
-<% @snippets.all.order("id desc").limit(5).each do |snippet|%>
+<% @snippets.each do |snippet|%>
 <div class="index-snippet">
 	<li><div class="name"><%= link_to snippet.name, snippet %></div></li>
 	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>"><code class="language-<%= snippet.category.language %>">

@@ -6,6 +6,7 @@ class Ability
             can :read, Snippet
             can :create, User
         else
+            can [:upvote], Snippet
             can [:read, :create], Snippet
             can [:read, :create], User
             can [:update, :destroy], Snippet, :user_id => user.id
