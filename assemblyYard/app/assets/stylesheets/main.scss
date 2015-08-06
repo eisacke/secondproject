@@ -1,0 +1,29 @@
+li {
+	list-style-type:none;
+	text-transform: capitalize;
+}
+
+.tags {
+	float:left;
+	font-family: 'Ubuntu Mono';
+}
+
+ * {
+	margin: 0;
+}
+html, body {
+	height: 100%;
+}
+.wrapper {
+	min-height: 100%;
+	margin: 0 auto -25px;
+}
+.footer, .push {
+	height: 25px; 
+}
+
+footer {
+	text-align: center;
+	font-family: 'Ubuntu Mono';
+	font-weight: 700;
+}
