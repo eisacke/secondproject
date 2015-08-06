@@ -1,7 +1,13 @@
 <h1> Users index </h1>
 <% @users.each do |user|%> 
- <ul>
- <li><p style="font-family:Ubuntu Mono;">User Name: </p><%= user.user_name %></li>
- <li><p style="font-family:Ubuntu Mono;">Email: </p><%= user.email %></li>
- </ul>
+<ul>
+	<li>
+		<p style="font-family:Ubuntu Mono;">User Name: </p>
+		<%= user.user_name %>
+	</li>
+	<li>
+		<p style="font-family:Ubuntu Mono;">Email: </p>
+		<%= user.email %>
+	</li>
+</ul>
 <% end %>

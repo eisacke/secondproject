@@ -9,13 +9,40 @@
 <% end %>
 <% @snippets.each do |snippet|%>
 <div class="index-snippet">
-	<li><div class="name"><%= link_to snippet.name, snippet %></div></li>
-	<li><div class="language"><div class="tags">Language: </div> <%= snippet.category.language %></div></li>
-	<li><div class="search-terms"><div class="tags">Search Terms: </div> <%= snippet.search_terms %></div></li>
-	<li><div class="user"><div class="tags">User: </div> <%= snippet.user.try(:user_name) %></div></li>
-	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>"><code class="language-<%= snippet.category.language %>">
-		<%= truncate(snippet.contents, length: 100) %>
-	</code></pre>
+	<li>
+		<div class="name">
+			<%= link_to snippet.name, snippet %>
+		</div>
+	</li>
+	<li>
+		<div class="language">
+			<div class="tags">
+				Language: 
+			</div> 
+			<%= snippet.category.language %>
+		</div>
+	</li>
+	<li>
+		<div class="search-terms">
+			<div class="tags">
+				Search Terms: 
+			</div> 
+			<%= snippet.search_terms %>
+		</div>
+	</li>
+	<li>
+		<div class="user">
+			<div class="tags">
+				User: 
+			</div> 
+			<%= snippet.user.try(:user_name) %>
+		</div>
+	</li>
+	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>">
+		<code class="language-<%= snippet.category.language %>">
+			<%= truncate(snippet.contents, length: 100) %>
+		</code>
+	</pre>
 </div>
 <% end %>
 

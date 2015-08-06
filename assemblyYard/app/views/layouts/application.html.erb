@@ -13,17 +13,17 @@
 	<body>
 		<%= render "header" %>
 		<main>
-		<%= yield(:search) %>
-		<% flash.each do |name, message| %>
-		<div class="flash-message flash-message-<%= name %>">
-		  <%= message %>
-		</div>
-		<% end %>
-		<%= yield %>
+			<%= yield(:search) %>
+			<% flash.each do |name, message| %>
+			<div class="flash-message flash-message-<%= name %>">
+				<%= message %>
+			</div>
+			<% end %>
+			<%= yield %>
 		</main>
 		<%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
 	</body>
-<div class="push"></div>
+	<div class="push"></div>
 </div>
 <footer>Work<span class="harder"> Harder</span><span class="faster"> Faster</span></footer>
 </html>

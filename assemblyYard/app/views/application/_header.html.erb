@@ -1,17 +1,35 @@
 <header>
   <nav>
     <ul>
-      <li><h1><%= link_to "assembly", root_path %><%= link_to "Yard", root_path, class: "yard" %></h1></li>
+      <li>
+        <h1>
+          <%= link_to "assembly", root_path %>
+          <%= link_to "Yard", root_path, class: "yard" %>
+        </h1>
+      </li>
       <% if can? :create, Snippet %>
-      <li><%= link_to "Add Code", new_snippet_path %></li>
+      <li>
+        <%= link_to "Add Code", new_snippet_path %>
+      </li>
       <% end %>
-      <li><%= link_to "Code", snippets_path %></li>
+      <li>
+        <%= link_to "Code", snippets_path %>
+      </li>
       <% if current_user %>
-      <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
-      <li>Hello, <%= link_to "#{current_user.user_name}", user_path(current_user) %></li>
+      <li>
+        <%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %>
+      </li>
+      <li>
+        Hello, 
+        <%= link_to "#{current_user.user_name}", user_path(current_user) %>
+      </li>
       <% else %>
-      <li><%= link_to "Login", login_path %></li>
-      <li><%= link_to "Sign Up", new_user_path %></li>
+      <li>
+        <%= link_to "Login", login_path %>
+      </li>
+      <li>
+        <%= link_to "Sign Up", new_user_path %>
+      </li>
       <% end %>
     </li>
   </ul>

@@ -1,23 +1,64 @@
 <div class="welcome-index">
-<p class="welcome">Welcome to <span class="ubuntu">assemblyYard</span></p>
-<p>You can search for <%= link_to "code", snippets_path %> by clicking on the link to the top right or <% if current_user %> register <% else %> <%= link_to "register", new_user_path %> <% end %>to add and edit your own snippets of code.</p>
-<p>When adding code it is important to :
-<ul><li>Ensure you select the correct language - this will allow assemblyYard to display your code with the proper syntax highlighting.</li>
-<li>Include search terms - these will allow you, and others, to find that code again.</li>
-<li>Be reasonable. This is a friendly tool for nice people. Don't be a big meany!</li>
-</ul>
-</p>
-<p>Thanks for visiting - love Sam </p>
+	<p class="welcome">Welcome to 
+		<span class="ubuntu">
+			assemblyYard
+		</span>
+	</p>
+	<p>You can search for 
+		<%= link_to "code", snippets_path %> 
+		by clicking on the link to the top right or 
+		<% if current_user %> 
+		register 
+		<% else %> 
+		<%= link_to "register", new_user_path %> 
+		<% end %>
+		to add and edit your own snippets of code.
+	</p>
+	<p>When adding code it is important to :
+		<ul>
+			<li>Ensure you select the correct language - this will allow assemblyYard to display your code with the proper syntax highlighting.</li>
+			
+			<li>Include search terms - these will allow you, and others, to find that code again.</li>
+
+			<li>Be reasonable. This is a friendly tool for nice people. Don't be a big meany!</li>
+		</ul>
+	</p>
+	<p>Thanks for visiting - love Sam </p>
 </div>
 <h1> Most Recent Code </h1>
 <% @snippets.all.order("id desc").limit(5).each do |snippet|%>
 <div class="index-snippet">
-	<li><div class="name"><%= link_to snippet.name, snippet %></div></li>
-	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>"><code class="language-<%= snippet.category.language %>">
-		<%= truncate(snippet.contents, length: 100) %>
-	</code></pre>
-	<li><div class="language"><div class="tags">Language: </div> <%= snippet.category.language %></div></li>
-	<li><div class="search-terms"><div class="tags">Search Terms: </div> <%= snippet.search_terms %></div></li>
-	<li><div class="user"><div class="tags">User: </div> <%= snippet.user.try(:user_name) %></div></li>
+	<li>
+		<div class="name">
+			<%= link_to snippet.name, snippet %>
+		</div>
+	</li>
+	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>">
+		<code class="language-<%= snippet.category.language %>">
+			<%= truncate(snippet.contents, length: 100) %>
+		</code>
+	</pre>
+	<li>
+		<div class="language">
+			<div class="tags">
+				Language: 
+			</div> 
+			<%= snippet.category.language %>
+		</div>
+	</li>
+	<li>
+		<div class="search-terms">
+			<div class="tags">Search Terms: 
+			</div> 
+			<%= snippet.search_terms %>
+		</div>
+	</li>
+	<li>
+		<div class="user">
+			<div class="tags">User: 
+			</div> 
+			<%= snippet.user.try(:user_name) %>
+		</div>
+	</li>
 </div>
 <% end %>
