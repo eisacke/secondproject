@@ -8,6 +8,7 @@ class UsersController < ApplicationController
 
 	def show
 		@user = User.find(params[:id])
+		@snippets = Snippet.all
 	end
 
 	def new

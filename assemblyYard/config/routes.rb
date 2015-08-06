@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 			put "like", to: "snippets#upvote"
 		end
 	end
+	
 	get "/login", to: "sessions#new"
 	delete "/logout", to: "sessions#destroy"
 end

@@ -39,6 +39,10 @@ class SnippetsController < ApplicationController
 		end
 	end
 
+	def user_snippets
+		@snippets = Snippet.find(:all, :conditions => {:user_id => current_user.id})
+	end
+
 	def destroy
 		@snippet.destroy
 		respond_to do |format|

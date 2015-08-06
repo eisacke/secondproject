@@ -1,15 +1,17 @@
+<div>
 <p>
   <strong>Username:</strong>
   <%= @user.user_name %>
 </p>
-
 <p>
   <strong>email:</strong>
   <%= @user.email %>
 </p>
-
 <% if can? :update, @user %>
 <%= link_to 'Edit', edit_user_path(@user) %> 
+<%= link_to "Delete", @user, method: :delete, data: { confirm: 'Delete your account?' } %>
 <% end %>
+</div>
+<h1 style="text-align:center; font-family:'Ubuntu Mono'; font-size:30px;">Your Code</h1>
+<%= render @user.snippets %>
 
-<%= link_to 'Back', users_path %>

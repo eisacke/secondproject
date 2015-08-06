@@ -58,8 +58,8 @@ text-area {
 	font-family: 'Ubuntu Mono'
 }
 
-.index-snippet {
-	border-bottom: 1px solid #EDEEEE;
+html > body > div.wrapper > main > div.index-snippet {
+	border-top: 1px solid black;
 }
 
 .welcome {
@@ -97,6 +97,10 @@ h1 > .do-stuff {
 	text-transform: capitalize;
 }
 
+main > .partial {
+	padding-bottom: 20px;
+	border-top: 1px solid black;
+} 
 
 
 

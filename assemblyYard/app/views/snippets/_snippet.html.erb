@@ -1,0 +1,15 @@
+<div class="partial">
+	<h1><%= link_to snippet.name, snippet %><span class="do-stuff"><% if can? :update, snippet %>
+		<%= link_to "Edit", edit_snippet_path(snippet) %>
+		<%= link_to "Delete", snippet, method: :delete, data: { confirm: 'Deltet this code?' } %>
+		<% end %> <%= link_to like_snippet_path(snippet), method: :put do %>
+		Upvote
+		<%= snippet.get_upvotes.size %>
+		<% end %></span></h1>
+		<li><div class="language"><div class="tags">language: </div> <%= snippet.category.language %></div></li>
+		<li><div class="search-terms"><div class="tags">Search Terms: </div> <%= snippet.search_terms %></div></li>
+		<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>">
+		<code class="language-<%= snippet.category.language %>">
+			<%= truncate(snippet.contents, length: 100) %>
+		</code></pre>
+</div>
