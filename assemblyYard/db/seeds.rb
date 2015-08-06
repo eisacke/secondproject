@@ -24,7 +24,12 @@ snippet1 = Snippet.create!(contents: "text-shadow: 0 0 5px #fff,
                0 0 40px #228DFF,
                0 0 50px #228DFF,
                0 0 75px #228DFF;", search_terms: "neon text css blue", name: "neon text", user: user1, category_id: 3)
-snippet2 = Snippet.create!(contents: "this is some more code!", search_terms: "update", name: "second code", user: user2, category_id: 2)
+snippet2 = Snippet.create!(contents: "window.onload = function() {
+    if(!window.location.hash) {
+        window.location = window.location + '#loaded';
+        window.location.reload();
+    }
+}", search_terms: "reload page once refresh javascript js", name: "page reloader", user: user2, category_id: 2)
 snippet3 = Snippet.create!(contents: "this is not code!", search_terms: "debug", name: "third code", user: user3, category_id: 3)
 snippet4 = Snippet.create!(contents: "* {
 	margin: 0;
