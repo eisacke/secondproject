@@ -1,5 +1,4 @@
-<h1> Code Index </h1>
-
+<h1 class="reload"> Code Index </h1>
 <% content_for :search do %>
   <div class="large-8 small-9 columns">
   <%= search_form_for @search do |f| %>
@@ -22,3 +21,12 @@
 <% end %>
 <%= link_to "Add Code", new_snippet_path %>
 <%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
+<script type="text/javascript">
+$('document').ready(function() {
+	if($('.reload').length){
+		console.log("element exists");
+	} 		
+});
+</script>
+
+

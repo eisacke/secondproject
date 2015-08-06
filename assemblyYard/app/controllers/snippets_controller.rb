@@ -6,9 +6,11 @@ class SnippetsController < ApplicationController
 		@snippets = Snippet.all
 		@search = Snippet.search(params[:q])
 		@snippets = @search.result(distinct: true)
+		# redirect_to :back
 	end
 
 	def show
+		# redirect_to :back
 	end
 
 	def new

@@ -1,14 +1,12 @@
-<h1> Show Code </h1>
- <%= @snippet.name %>
- <%= @snippet.search_terms %>
+<h1 class="reload-show"> Show Code </h1>
+ <li><div class="name"><%= @snippet.name %></div></li>
+ <li><div class="search-terms"><%= @snippet.search_terms %></div></li>
  <pre class="language-<%= @snippet.category.language %>" rel="<%= @snippet.category.language %>"><code class="language-<%= @snippet.category.language %>">
  <%= @snippet.contents %>
  </code></pre>
- <%= @snippet.user.try(:user_name) %>
- <%= @snippet.category.language %>
+ <li><div class="user"><%= @snippet.user.try(:user_name) %></div></li>
+ <li><div class="language"><%= @snippet.category.language %></div></li>
  <% if can? :update, @snippet %>
  <%= link_to "Edit", edit_snippet_path(@snippet) %>
  <%= link_to "Delete", @snippet, method: :delete, data: { confirm: 'Deltet this code?' } %>
  <% end %>
-
-<%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
