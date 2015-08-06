@@ -16,15 +16,28 @@ header nav {
   text-shadow:
   0 0 4px #FF9F1C,
   0 0 6px #FF9F1C,
-  0 0 8px #FF9F1C;
+  0 0 8px #FF9F1C,
+  0 0 12px #FF9F1C,
+  0 0 16px #FF9F1C,
+  0 0 20px #FF9F1C,
+}
+
+.harder {
+  color:white;
+  text-shadow:
+  0 0 4px #FF9F1C,
+  0 0 6px #FF9F1C,
+  0 0 8px #FF9F1C,
+  0 0 12px #FF9F1C,
 }
 
 .faster {
   color:white;
   text-shadow:
-  0 0 4px #660066,
-  0 0 6px #660066,
-  0 0 8px #660066;
+  0 0 4px #FF0AFF,
+  0 0 6px #FF0AFF,
+  0 0 8px #FF0AFF,
+  0 0 12px #FF0AFF;
 }
 
 header nav ul {
