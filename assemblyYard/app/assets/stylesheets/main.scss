@@ -8,7 +8,7 @@ li {
 	font-family: 'Ubuntu Mono';
 }
 
- * {
+* {
 	margin: 0;
 }
 html, body {
@@ -27,3 +27,32 @@ footer {
 	font-family: 'Ubuntu Mono';
 	font-weight: 700;
 }
+
+.actions {
+	font-family: 'Ubuntu Mono';
+}
+
+label, select {
+	font-family: 'Ubuntu Mono';
+}
+
+.field {
+	min-height:40px;
+}
+
+input {
+	min-height: 30px;
+	min-width: 240px;
+	font-size: 18px;
+}
+
+select {
+	font-size: 14px;
+	font-family: 'Ubuntu Mono';
+}
+
+text-area {
+	font-family: 'Ubuntu Mono'
+}
+
+

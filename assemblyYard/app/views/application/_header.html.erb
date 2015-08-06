@@ -8,7 +8,7 @@
       <li><%= link_to "Code", snippets_path %></li>
       <% if current_user %>
       <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
-      <li>Hello, <%= current_user.user_name %></li>
+      <li>Hello, <%= link_to "#{current_user.user_name}", edit_user_path(current_user) %></li>
       <% else %>
       <li><%= link_to "Login", login_path %></li>
       <li><%= link_to "Sign Up", new_user_path %></li>

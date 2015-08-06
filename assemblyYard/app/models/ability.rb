@@ -7,7 +7,9 @@ class Ability
             can :create, User
         else
             can [:read, :create], Snippet
+            can [:read, :create], User
             can [:update, :destroy], Snippet, :user_id => user.id
+            can [:update, :destroy], User, :id => user.id
         end
     end
 
