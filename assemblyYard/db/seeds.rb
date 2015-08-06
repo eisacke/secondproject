@@ -30,7 +30,7 @@ snippet2 = Snippet.create!(contents: "window.onload = function() {
         window.location.reload();
     }
 }", search_terms: "reload page once refresh javascript js", name: "page reloader", user: user2, category_id: 2)
-snippet3 = Snippet.create!(contents: "this is not code!", search_terms: "debug", name: "third code", user: user3, category_id: 3)
+snippet3 = Snippet.create!(contents: "array.each_with_index {|val, index| puts '\#{val} => \#{index}' }", search_terms: "iterate through array ruby puts prints value index each", name: "ruby array iterator value => index", user: user3, category_id: 1)
 snippet4 = Snippet.create!(contents: "* {
 	margin: 0;
 }

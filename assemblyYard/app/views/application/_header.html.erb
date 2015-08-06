@@ -1,18 +1,71 @@
 <header>
   <nav>
     <ul>
-      <h1><%= link_to "assemblyYard", root_path %></h1>
+      <li><h1><%= link_to "assemblyYard", root_path %></h1></li>
+      <% if can? :create, Snippet %>
+      <li><%= link_to "Add Code", new_snippet_path %></li>
+      <% end %>
+      <li><%= link_to "Code", snippets_path %></li>
       <% if current_user %>
-      <li>Hello, <%= current_user.user_name %> <%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
+      <li><%= link_to "Logout", logout_path, method: :delete, data: { confirm: "Are you sure?" } %></li>
+      <li>Hello, <%= current_user.user_name %></li>
       <% else %>
       <li><%= link_to "Login", login_path %></li>
       <li><%= link_to "Sign Up", new_user_path %></li>
       <% end %>
-      <li><%= link_to "Code", snippets_path %>
-        <% if can? :create, Snippet %>
-        <%= link_to "Add Code", new_snippet_path %>
-        <% end %>
-      </li>
-    </ul>
-  </nav>
+    </li>
+  </ul>
+</nav>
 </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- * {
+  margin: 0;
+}
+-->
+<!-- html, body {
+  height: 100%;
+  width :960px;
+  margin: 0 auto;
+  font-family:sans-serif;
+  border-right: 5px;
+  text-transform: capitalize;
+}
+
+.tags {
+  float:left;
+  margin-right:5px;
+ }
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -25px; 
+ }
+
+.footer, .push {
+  height: 25px; 
+ }
+
+.footer {
+  background-color: grey;
+  color:white;
+  font-size: 25px;
+  text-align: center;
+  text-shadow:   0 0 20px #ff6201,
+                 0 0 25px #ff6201,
+                 0 0 30px #ff6201,
+                 0 0 35px #ff6201,
+                 0 0 40px #ff6201;
+ } -->

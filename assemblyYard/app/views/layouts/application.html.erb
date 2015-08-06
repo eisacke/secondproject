@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>AssemblyYard</title>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700' rel='stylesheet' type='text/css'>
 	<%= stylesheet_link_tag 'application', media: 'all' %>
 	<%= javascript_include_tag 'application' %>
 	<%= javascript_include_tag 'prism' %>
@@ -10,6 +12,7 @@
 <div class="wrapper">
 	<body>
 		<%= render "header" %>
+		<main>
 		<%= yield(:search) %>
 		<% flash.each do |name, message| %>
 		<div class="flash-message flash-message-<%= name %>">
@@ -17,6 +20,7 @@
 		</div>
 		<% end %>
 		<%= yield %>
+		</main>
 		<%= javascript_include_tag 'prism', 'data-turbolinks-track' => true %>
 	</body>
 <div class="push"></div>
