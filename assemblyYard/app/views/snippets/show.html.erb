@@ -1,11 +1,10 @@
-<h1 class="reload-show"> Show Code </h1>
- <li><div class="name"><%= @snippet.name %></div></li>
- <li><div class="search-terms"><%= @snippet.search_terms %></div></li>
+ <h1><div class="name"><%= @snippet.name %></div></h1>
  <pre class="language-<%= @snippet.category.language %>" rel="<%= @snippet.category.language %>"><code class="language-<%= @snippet.category.language %>">
  <%= @snippet.contents %>
  </code></pre>
- <li><div class="user"><%= @snippet.user.try(:user_name) %></div></li>
- <li><div class="language"><%= @snippet.category.language %></div></li>
+ <li><div class="language"><div class="tags">language: </div> <%= @snippet.category.language %></div></li>
+ <li><div class="search-terms"><div class="tags">Search Terms: </div> <%= @snippet.search_terms %></div></li>
+ <li><div class="user"><div class="tags">User: </div> <%= @snippet.user.try(:user_name) %></div></li>
  <% if can? :update, @snippet %>
  <%= link_to "Edit", edit_snippet_path(@snippet) %>
  <%= link_to "Delete", @snippet, method: :delete, data: { confirm: 'Deltet this code?' } %>
