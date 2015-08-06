@@ -27,6 +27,15 @@ class UsersController < ApplicationController
 		end
 	end
 
+	def update
+		respond_to do |format|
+			if @user.update(user_params)
+				format.html {redirect_to @user}
+				format.json {render :show, status: :ok, location: @user}
+			end
+		end
+	end
+
 	def user_params
 		params.require(:user).permit(:user_name, :email, :password, :password_confirmation)
 	end
