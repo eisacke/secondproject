@@ -35,9 +35,5 @@
  		<%= @snippet.user.try(:user_name) %>
  	</div>
  </li>
- <pre class="language-<%= @snippet.category.language %>" rel="<%= @snippet.category.language %>">
- 	<code class="language-<%= @snippet.category.language %>">
- 		<%= @snippet.contents %>
- 	</code>
- </pre>
+ <pre class="language-<%= @snippet.category.language %>" rel="<%= @snippet.category.language %>"><code class="language-<%= @snippet.category.language %>"><%= @snippet.contents %></code></pre>
 
