@@ -11,16 +11,17 @@ li {
 * {
 	margin: 0;
 }
+
 html, body {
 	height: 100%;
 }
 
 .wrapper {
 	min-height: 100%;
-	margin: 0 auto -25px;
+	margin: 0 auto -77px;
 } 
 .push {
-	height: 25px; 
+	height: 77px; 
 }
 
 footer {
@@ -28,7 +29,7 @@ footer {
 	font-family: 'Ubuntu Mono';
 	font-weight: 700;
 	font-size: 25px;
-	height:25px;
+	padding: 20px;
 }
 
 .actions {
