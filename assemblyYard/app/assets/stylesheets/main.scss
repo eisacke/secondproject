@@ -1,35 +1,11 @@
 li {
-	list-style-type:none;
+	list-style-type: none;
 	text-transform: capitalize;
 }
 
 .tags {
 	float:left;
 	font-family: 'Ubuntu Mono';
-}
-
-* {
-	margin: 0;
-}
-
-html, body {
-	height: 100%;
-}
-
-.wrapper {
-	min-height: 100%;
-	margin: 0 auto -77px;
-} 
-.push {
-	height: 77px; 
-}
-
-footer {
-	text-align: center;
-	font-family: 'Ubuntu Mono';
-	font-weight: 700;
-	font-size: 25px;
-	padding: 20px;
 }
 
 .actions {
@@ -60,51 +36,39 @@ text-area {
 }
 
 html > body > div.wrapper > main > div.index-snippet {
-	border-top: 1px solid black;
+	border-bottom: 2px solid black;
 }
 
-.welcome {
-	text-align: center;
-	margin: 20px;
-}
+// INSTRUCTIONS
 
-.ubuntu {
-	font-family: 'Ubuntu Mono';
-	font-size:25px; 
+.welcome-index > ul {
+	padding-left: 20px;
 }
 
 .welcome-index > ul > li {
 	text-transform: none;
-	list-style-type: disc;
-	margin:1em;
+	list-style-type: disc; 
 }
 
 .welcome-index {
-	border-bottom: 1px solid black;
-	margin:10px;
-	min-height: 500px;
+	border-bottom: 2px solid black;
+	padding: 20px 0;
+	margin-bottom: 20px;
 }
 
-main > a {
-	color:black;
-	margin:5px;
-	margin-left:none;
-	float:right;
-}
+// USER CODE
 
-h1 > .do-stuff {
+main > .partial {
+	padding: 20px 0;
+	border-bottom: 2px solid black;
+} 
+
+// SNIPPET PAGE
+
+.do-stuff {
 	text-align: right;
 	float:right;
 	text-transform: capitalize;
-}
-
-main > .partial {
-	padding-bottom: 20px;
-	border-top: 1px solid black;
-} 
-
-p {
-	padding:.5em;
 }
 
 

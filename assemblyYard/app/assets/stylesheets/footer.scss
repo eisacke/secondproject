@@ -1,0 +1,43 @@
+.harder {
+  color:white;
+  text-shadow:
+  0 0 4px #FF9F1C,
+  0 0 6px #FF9F1C,
+  0 0 8px #FF9F1C,
+  0 0 12px #FF9F1C,
+}
+
+.faster {
+  color:white;
+  text-shadow:
+  0 0 4px #FF0AFF,
+  0 0 6px #FF0AFF,
+  0 0 8px #FF0AFF,
+  0 0 12px #FF0AFF;
+}
+
+// STICKY FOOTER
+
+* {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  margin: 0 auto -77px;
+} 
+.push {
+  height: 77px; 
+}
+
+footer {
+  text-align: center;
+  font-family: 'Ubuntu Mono';
+  font-weight: 700;
+  font-size: 25px;
+  padding: 20px;
+}

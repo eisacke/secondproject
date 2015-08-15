@@ -1,7 +1,7 @@
 header {
   width: 100%;
   background: white;
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 
 header nav {
@@ -9,6 +9,54 @@ header nav {
   margin: 0 auto;
   height: 60px;
   line-height: 60px;
+}
+
+/*HEADER LINKS*/
+
+header nav ul {
+  height: 60px;
+  line-height: 60px;
+  font-size: 18px;
+}
+
+header nav ul li {
+  display: inline;
+  height: 60px;
+  line-height: 60px;
+  float: right;
+  padding: 0 10px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul li a:hover {
+  text-decoration: none;
+  color: #FF9F1B;
+}
+
+header nav ul li h1 a {
+  text-decoration: none;
+  color: black;
+  font-size: 35px;
+  text-transform: none;
+}
+
+header nav ul li h1 a:hover {
+  text-decoration: none;
+  color: black;
+}
+
+/*LOGO*/
+
+header nav ul li:first-child {
+  float: left;
+  padding: 0;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: 'Ubuntu Mono', bold;
 }
 
 .yard {
@@ -22,62 +70,18 @@ header nav {
   0 0 20px #FF9F1C,
 }
 
-.harder {
-  color:white;
-  text-shadow:
-  0 0 4px #FF9F1C,
-  0 0 6px #FF9F1C,
-  0 0 8px #FF9F1C,
-  0 0 12px #FF9F1C,
+.yard:hover {
+  color: white;
 }
 
-.faster {
-  color:white;
-  text-shadow:
-  0 0 4px #FF0AFF,
-  0 0 6px #FF0AFF,
-  0 0 8px #FF0AFF,
-  0 0 12px #FF0AFF;
-}
-
-header nav ul {
-  height: 60px;
-  line-height: 60px;
-  font-size: 20px;
-}
-
-header nav ul li:first-child {
-  float: left;
-  padding: 0;
-  font-size: 25px;
-  font-weight: bold;
-  font-family: 'Ubuntu Mono', bold;
-}
-
-header nav ul li {
-  display: inline;
-  height: 60px;
-  line-height: 60px;
-  float: right;
-  padding: 0 10px;
-}
-
-header nav ul li a {
-  text-decoration: underline;
-  color: black;
-}
-
-header nav ul li h1 a {
-  text-decoration: none;
-  color: black;
-  font-size: 35px;
-  text-transform: none;
-}
+/*SEARCH BAR*/
 
 .search-bar {
   text-align: center;
   margin:20px;
 }
+
+/*NEON HEADER*/
 
 .radius-right.button {
   -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
@@ -130,6 +134,3 @@ header nav ul li h1 a {
   font-family: 'Ubuntu';
   font-size: 20px;
 }
-
-
-

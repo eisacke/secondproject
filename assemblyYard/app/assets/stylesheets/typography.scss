@@ -1,0 +1,37 @@
+h1 {
+  text-transform: uppercase;
+}
+
+h2 {
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 10px;
+}
+
+a {
+  color: black;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.name {
+  font-weight: 700;
+  color: #FF9F1B;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+// WELCOME
+
+.welcome {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.ubuntu {
+  font-family: 'Ubuntu Mono';
+  font-size: 25px;
+  font-weight: 700;
+}
