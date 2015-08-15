@@ -1,4 +1,4 @@
-<div>
+<div class="user-details">
 <p>
   <strong>Username:</strong>
   <%= @user.user_name %>
@@ -12,6 +12,6 @@
 <%= link_to "Delete", @user, method: :delete, data: { confirm: 'Delete your account?' } %>
 <% end %>
 </div>
-<h1 style="text-align:center; font-family:'Ubuntu Mono'; font-size:30px;">Your Code</h1>
+<h2>Your Code</h2>
 <%= render @user.snippets %>
 
