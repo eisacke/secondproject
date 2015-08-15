@@ -72,5 +72,16 @@ header nav ul li:first-child {
 }
 
 .yard:hover {
+  color:white;
+  text-shadow:
+  0 0 8px #FF9F1C,
+  0 0 10px #FF9F1C,
+  0 0 12px #FF9F1C,
+  0 0 16px #FF9F1C,
+  0 0 20px #FF9F1C,
+  0 0 24px #FF9F1C,
+}
+
+.yard:hover {
   color: white;
 }
