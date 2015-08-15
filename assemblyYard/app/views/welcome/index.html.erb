@@ -25,37 +25,14 @@
 <h2>Most Recent Code</h2>
 <% @snippets.all.order("id desc").limit(5).each do |snippet|%>
 <div class="index-snippet">
-	<li>
-		<div class="name">
-			<%= link_to snippet.name, snippet %>
-		</div>
-	</li>
+			<li><h1><%= link_to snippet.name, snippet %></h1></li>
 	<pre class="language-<%= snippet.category.language %>" rel="<%= snippet.category.language %>">
 		<code class="language-<%= snippet.category.language %>">
 			<%= truncate(snippet.contents, length: 100) %>
 		</code>
 	</pre>
-	<li>
-		<div class="language">
-			<div class="tags">
-				Language: 
-			</div> 
-			<%= snippet.category.language %>
-		</div>
-	</li>
-	<li>
-		<div class="search-terms">
-			<div class="tags">Search Terms: 
-			</div> 
-			<%= snippet.search_terms %>
-		</div>
-	</li>
-	<li>
-		<div class="user">
-			<div class="tags">User: 
-			</div> 
-			<%= snippet.user.try(:user_name) %>
-		</div>
-	</li>
+	<li><span class="tags">Language:</span> <span class="result"><%= snippet.category.language %></span></li>
+	<li><span class="tags">Search Terms:</span> <span class="result"><%= snippet.search_terms %></span></li>
+	<li><span class="tags">User:</span> <span class="result"><%= snippet.user.try(:user_name) %></span></li>
 </div>
 <% end %>
