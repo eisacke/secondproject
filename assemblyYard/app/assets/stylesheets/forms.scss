@@ -1,0 +1,90 @@
+label, select {
+  font-family: 'Ubuntu Mono';
+}
+
+.field {
+  margin: 10px 0;
+}
+/*SEARCH BAR*/
+
+.search-bar {
+  text-align: center;
+  margin:30px;
+}
+
+input[class=search] {
+  width: 300px;
+  padding: 5px 10px;
+  font-family: 'Ubuntu Mono';
+  font-size: 18px;
+  border: 1px solid black;
+}
+
+input[type=submit] {
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border: 1px solid black;
+  font-size: 16px;
+  font-family: 'Ubuntu Mono';
+  margin-bottom: 10px;
+}
+
+input[type=submit]:hover {
+  color: orange;
+  border: 1px solid orange;
+}
+
+input[class=search-submit] {
+  background-color: white;
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Ubuntu Mono';
+  font-size: 22px;
+  border: 1px solid white;
+  text-shadow:
+  0 0 4px #FF9F1C,
+  0 0 6px #FF9F1C,
+  0 0 8px #FF9F1C,
+  0 0 12px #FF9F1C,
+  0 0 16px #FF9F1C,
+  0 0 20px #FF9F1C,
+}
+
+input[class=search-submit]:hover {
+  background-color: white;
+  color: white;
+  padding: 5px 10px;
+  font-family: 'Ubuntu Mono';
+  font-size: 22px;
+  border: 1px solid white;
+  text-shadow:
+  0 0 8px #FF9F1C,
+  0 0 10px #FF9F1C,
+  0 0 12px #FF9F1C,
+  0 0 16px #FF9F1C,
+  0 0 20px #FF9F1C,
+  0 0 24px #FF9F1C,
+}
+
+input[type=text] {
+  padding: 5px 10px;
+  font-family: 'Ubuntu Mono';
+  font-size: 16px;
+}
+
+#snippet_category_id{
+  padding: 5px 10px;
+  font-family: 'Ubuntu Mono';
+  background-color: white;
+  border: 1px solid black;
+  font-size: 16px;
+}
+
+#snippet_contents {
+  font-family: 'Ubuntu Mono';
+  font-size: 16px;
+  width: 600px;
+  height: 200px;
+  padding: 10px;
+}

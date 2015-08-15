@@ -1,7 +1,7 @@
 <%= form_for @snippet do |f| %>
 <% if @snippet.errors.any? %>
 <div class="error_messages">
-	<h2>Form is invalid</h2>
+	<h3>Form is invalid</h3>
 	<ul>
 		<% for message in @snippet.errors.full_messages %>
 		<li>
