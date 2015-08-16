@@ -2,12 +2,12 @@
  	<span class="snippet-name"><%= @snippet.name %></span>
  	<span class="do-stuff">
  		<% if can? :update, @snippet %>
- 		<%= link_to "Edit", edit_snippet_path(@snippet) %>
+ 		<span class="edit"><%= link_to "Edit", edit_snippet_path(@snippet) %>
  		<%= link_to "Delete", @snippet, method: :delete, data: { confirm: 'Deltet this code?' } %>
  		<% end %>
  		<%= link_to like_snippet_path(@snippet), method: :put do %>
  		Upvote
- 		<%= @snippet.get_upvotes.size %>
+ 		<%= @snippet.get_upvotes.size %></span>
  		<% end %>
  	</span>
  </h1></li>

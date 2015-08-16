@@ -3,8 +3,7 @@
     <ul>
       <li>
         <h1>
-          <%= link_to "assembly", root_path %>
-          <%= link_to "Yard", root_path, class: "yard" %>
+          <%= link_to "assembly", root_path %><%= link_to "Yard", root_path, class: "yard" %>
         </h1>
       </li>
         <% if can? :create, Snippet %>

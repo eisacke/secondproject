@@ -8,8 +8,8 @@
   <%= @user.email %>
 </p>
 <% if can? :update, @user %>
-<%= link_to 'Edit', edit_user_path(@user) %> 
-<%= link_to "Delete", @user, method: :delete, data: { confirm: 'Delete your account?' } %>
+<span class="edit"><%= link_to 'Edit', edit_user_path(@user) %> 
+<%= link_to "Delete", @user, method: :delete, data: { confirm: 'Delete your account?' } %></span>
 <% end %>
 </div>
 <h2>Your Code</h2>
